@@ -74,9 +74,9 @@ body {
   /* fuera del tutorial */
 
   #bloque{
-    padding-top: 30px;
-    padding-bottom: 50px;
     border: solid black 4px;
     border-radius: 15px;
     background-color:rgb(255, 243, 249);
+    margin: 2.5em 20em;
+    
   }

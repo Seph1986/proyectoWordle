@@ -1,5 +1,6 @@
-let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH']
 let intentos = 5;
+
+let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH','HELLO','BREAD','BRIEF','ALARM','FORCE']
 const palabra = diccionario[Math.floor(Math.random() * diccionario.length)];
 
 const BUTTON = document.getElementById("guess-button");
