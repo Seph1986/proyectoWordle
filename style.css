@@ -1,82 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 50px;
-  }
-     
-  #guess-input {
-    display: block;
-    margin: 0 auto 20px;
-    padding: 10px;
-    font-size: 18px;
-    width: 250px;
+  font-family: 'Montserrat',Arial, sans-serif;
+  background-image: url(./background.color.abstract.jpg);
+}
+
+h1 {
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 50px;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  background-color: #5E608A;
+}
+   
+#guess-input {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  font-size: 18px;
+  color: black;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: gainsboro;
+  text-align: center;
+  font-weight: bold;
+}
+   
+#guess-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #8285BF;
+  color: black;
+  border: solid 2px black;
+  border-radius: 10px;
+  font-weight: bold;
+  font: 'Montserrat',Arial, sans-serif;
+}
+
+#grid{
+  text-align: center;
+  margin-top: 20px;
+}
+   
+button:active {
+    transform: scale(0.95);
+}
+   
+.letter {
     border: 2px solid black;
-    border-radius: 10px;
-    background-color: #bfffff;
+    border-radius: 8px;
+    padding: 3px;
+    margin: 3px;
+    min-width: 20px;
     text-align: center;
-    font-weight: bold;
-  }
-     
-  #guess-button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #0CBABA;
-    color: #fff;
-    border-radius: 10px;
-    
+    display: inline-block
+}
+   
+.row{
+    margin-bottom: 10px;
+}
+   
+.input-area{
+    margin: 30px;
+}
 
-  }
+/* AÑADIDO */
 
-  #grid{
-    text-align: center;
-    margin-top: 20px;
-  }
-     
-  button:active {
-      transform: scale(0.95);
-      background-color: ;
-  }
-     
-  .letter {
-      border: 2px solid black;
-      border-radius: 8px;
-      padding: 3px;
-      margin: 3px;
-      min-width: 20px;
-      text-align: center;
-      display: inline-block
-  }
-     
-  .row{
-      margin-bottom: 10px;
-  }
-     
-  .input-area{
-      margin: 30px;
-  }
+[data-emoji] {
+  font-style: normal;
+  font-weight: normal;
+}
+[data-emoji]:before {
+  content: attr(data-emoji);
+  margin-right: .125em;
+}
 
-  /* AÑADIDO */
+/* fuera del tutorial */
 
-  [data-emoji] {
-    font-style: normal;
-    font-weight: normal;
-  }
-  [data-emoji]:before {
-    content: attr(data-emoji);
-    margin-right: .125em;
-  }
-
-  /* fuera del tutorial */
-
-  #bloque{
-    border: solid black 4px;
-    border-radius: 15px;
-    background-color:rgb(255, 243, 249);
-    margin: 2.5em 20em;
-    
-  }
+#bloque{
+  border: solid black 4px;
+  border-radius: 15px;
+  background-color: white;
+  margin: 2.5em 20em;
+  
+}

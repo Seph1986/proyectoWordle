@@ -1,7 +1,17 @@
 let intentos = 5;
+let palabra = 'APPLE'
 
-let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH','HELLO','BREAD','BRIEF','ALARM','FORCE']
-const palabra = diccionario[Math.floor(Math.random() * diccionario.length)];
+let diccionario = [ 'HURLS', 'WINGS', 'YOUTH','HELLO','BREAD','BRIEF','ALARM','FORCE'];
+
+const API = 'https://random-word-api.vercel.app/api?words=1&length=5&type=uppercase';
+
+//FUNCION ASINCRONICA
+fetch(API).then(response => response.json())
+.then(response =>{
+    palabra = response[0].toUpperCase()
+    console.log(palabra)
+})
+.catch( err => { palabra = diccionario[Math.floor(Math.random() * diccionario.length)]; console.log(err)})
 
 const BUTTON = document.getElementById("guess-button");
 BUTTON.addEventListener("click", intentar);
@@ -51,6 +61,19 @@ function intentar(){
         intentos--
     if (intentos==0){
         terminar("<h1>PERDISTE! 😒</h1>")
+
+        const GRID = document.getElementById ("grid");
+        const ROW = document.createElement ('div');
+        ROW.className = 'row';
+
+            for (let i in INTENTO){
+            const SPAN = document.createElement('span');
+            SPAN.className = 'letter';
+            SPAN.innerHTML = palabra[i];
+            SPAN.style.backgroundColor = '#79b851';
+
+            ROW.appendChild(SPAN);}
+        GRID.appendChild(ROW);
     }
 }
 
@@ -67,14 +90,5 @@ function terminar(mensaje){
     BUTTON.disabled = true;
     let contenedor = document.getElementById('guesses');
     contenedor.innerHTML = mensaje;
-
-
 }
 
-
-
-/*window.addEventListener('load', init)
-
-function init(){
-    console.log('Esto se ejecuta solo cuando se carga la pagina web')
-}*/
