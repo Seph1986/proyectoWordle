@@ -79,9 +79,13 @@ function intentar(){
 
 function leerIntento(){
     let prueba = document.getElementById ("guess-input");
-    prueba = prueba.value;
-    prueba = prueba.toUpperCase();
-    return prueba;
+    prueba = prueba.value
+        if (prueba.length === 5){
+        prueba = prueba.toUpperCase();
+        return prueba;}
+        else{
+            window.alert("Cantidad de letras invalida")
+        }
 }
 
 function terminar(mensaje){
